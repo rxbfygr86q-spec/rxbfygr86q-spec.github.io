@@ -1,0 +1,16 @@
+{
+    "name": "Mine Noter",
+    "short_name": "Noter",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#0d1729",
+    "theme_color": "#007aff",
+    "icons": [
+      {
+        "src": "icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ]
+  }
+  

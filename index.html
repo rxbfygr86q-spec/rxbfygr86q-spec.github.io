@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <!-- Ændrer farven på iOS statusbar -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noter</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Noter">
+  <link rel="apple-touch-icon" href="icon.png">
+</head>
+<body>
+  <!-- Topbar -->
+  <div class="top-bar">
+    <div class="left-group">
+      <img src="krone.png" class="nav-icon" alt="left-group"> <!-- Venstre ikon -->
+      <span class="top-title">KØREKORT</span>
+    </div>
+    <div class="right-icon">
+      <img src="prikker.png" class="nav-icon" alt="right-icon"> <!-- Højre ikon -->
+    </div>
+  </div>
+
+  <div class="app">
+    <div id="page-content">
+      <img src="forside.png" class="kort-billede" alt="Kort billede">
+    </div>
+  
+    
+  </div>
+  
+
+
+  
+  <!-- Bundbar -->
+  <div class="bottom-nav">
+    <div class="nav-item active" data-page="Kort">
+      <img src="kort.png" class="nav-icon" alt="Kort">
+      <span>Kørekort</span>
+    </div>
+
+    <div class="nav-item" data-page="Kortinfo">
+      <img src="kortinfo.png" class="nav-icon" alt="Kortinfo">
+      <span>Kortinfo</span>
+    </div>
+    <div class="nav-item" data-page="Scan">
+      <img src="scan.png" class="nav-icon" alt="scan">
+      <span>Scan</span>
+    </div>
+    <div class="nav-item" data-page="Kontrol">
+      <img src="kontrol.png" class="nav-icon" alt="kontrol">
+      <span>Kontrol</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

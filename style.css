@@ -1,0 +1,176 @@
+:root {
+  --topbar-height: 8.33vh;    /* 1/12 af skærmen */
+  --bottombar-height: 13vh; /* 1/12 af skærmen */
+}
+
+/* GENEREL STIL */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  background: #0d1729;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Sørg for at app-indholdet fylder mellem top og bund */
+.app {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  overflow: hidden; /* vi håndterer scrolling inden for indhold om nødvendigt */
+  background-color: #0d1729;
+  padding: 0; /* valgfri indre margin */
+}
+
+h1 {
+  text-align: center;
+  margin: calc(var(--topbar-height) / 6) 0 8px; /* lidt luft under topbaren */
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* TOPBAR */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* venstre gruppe til venstre, højre ikon til højre */
+  background-color: #0d1729;
+  height: var(--topbar-height); /* 1/12 af skærmen */
+  padding: 0 12px;
+  
+  color: white;
+}
+
+.left-group {
+  display: flex;
+  align-items: center;
+}
+
+.top-title {
+  font-size: 16px;
+  margin-left: 8px; /* afstand fra venstre ikon */
+}
+
+/* Styling for top og nav png-ikoner */
+.nav-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
+
+/* højre ikon container (ikke nødvendig men pæn) */
+.right-icon .nav-icon {
+  display: block;
+}
+
+/* BUNDNAVIGATION */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #0d1729; /* SAMME FARVE SOM RESTEN */
+  height: var(--bottombar-height); /* 1/12 af skærmen */
+
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  width: 25%;
+  cursor: pointer;
+  padding: 5px;           /* ny: lidt indvendig plads */
+  border-radius: 8px;     /* ny: afrundede hjørner */
+  transition: background-color 0.2s; /* ny: blød overgang når aktiv */
+}
+
+.nav-item.active {
+  background-color: #1f2a44; /* ny: baggrundsfarve på aktiv knap */
+}
+
+
+.nav-item .icon-placeholder {
+  width: 22px;
+  height: 22px;
+  margin-bottom: 4px;
+  background-color: #1f2a44;
+  border-radius: 4px;
+}
+
+.nav-item img.nav-icon {
+  margin-bottom: 4px;
+}
+
+/* Aktiv knap */
+.nav-item.active span {
+  color: #E8E9EB;
+}
+.nav-item.active .icon-placeholder {
+  background-color: #007aff;
+}
+
+
+.kort-billede {
+  position: absolute;
+  top: calc(var(--topbar-height) - 70px); /* 5 px tættere på topbaren */
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - var(--topbar-height) - var(--bottombar-height) + 5px);
+  object-fit: cover;
+  display: block;
+}
+
+
+
+.billede-valg {
+  display: block;      /* Gør knappen til en blok, så den fylder hele bredden */
+  width: 80%;          /* Valgfrit: gør knappen mindre end hele bredden */
+  margin: 10px auto;   /* Centrer knappen og giv lidt afstand mellem dem */
+  padding: 10px 20px;
+  background-color: #1f2a44;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.billede-valg:hover {
+  background-color: #2c3b5c;
+}
+
+/* ... eksisterende CSS her ... */
+
+/* Tekstfelt */
+.tekst-felt {
+  width: 90%;
+  margin: 10px auto;       
+}
+.tekst-overlay {
+  position: absolute;   /* Gør det muligt at placere hvor som helst ovenpå billedet */
+  top: 535px;            /* afstand fra toppen af .app / billedet */
+  left: 160px;           /* afstand fra venstre kant */
+  color: white;         /* tekstfarve */
+  font-size: 8px;      /* størrelse på teksten */
+  font-weight: bold;    /* valgfrit */
+  z-index: 10;          /* sikrer, at teksten ligger ovenpå billedet */
+  
+  padding: 5px 10px;   /* valgfrit: lidt indvendig afstand */
+  border-radius: 5px;   /* valgfrit: rundede hjørner */
+}
+
+.info-billede {
+  display: block;
+  width: 100%;      /* fylder hele bredden */
+  height: auto;     /* bevarer proportioner */
+  margin-top: - 100px; /* rykker billedet ned */
+}
