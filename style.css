@@ -179,7 +179,7 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 50vw;
   height: calc(100svh - var(--bottombar-height)); /* Brug svh i stedet for vh */
   object-fit: contain; /* Sørger for at hele billedet kan ses */
   display: block;
