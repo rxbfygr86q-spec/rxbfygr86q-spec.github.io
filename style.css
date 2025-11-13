@@ -179,9 +179,8 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  width: 200vw;
-  height: calc(100svh - var(--bottombar-height)); /* Brug svh i stedet for vh */
-  object-fit: contain; /* Sørger for at hele billedet kan ses */
+  width: 100vw;
+  height: calc(100svh - var(--bottombar-height)); /* Fylder fra toppen til bundbar */
+  object-fit: cover;  /* Fylder hele området, beskærer evt. lidt hvis proportioner ikke passer */
   display: block;
-  background-color: black; /* Valgfrit – så det ser pænt ud hvis billedet ikke fylder hele skærmen */
 }
