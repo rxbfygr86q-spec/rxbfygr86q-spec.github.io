@@ -60,18 +60,20 @@ const pages = {
   },
 
 "Scan": function() {
-    pageContent.innerHTML = ''; // ryd alt
-    const img = document.createElement('img');
-    img.src = 'scanbillede.png';       // dit scan-billede
-    img.alt = 'Scan billede';
-    img.className = 'scan-billede'; // ny klasse til Scan
+  pageContent.innerHTML = '';
+  
+  // Skjul topbaren
+  document.querySelector('.top-bar').style.display = 'none';
+  
+  // Opret og vis billede
+  const img = document.createElement('img');
+  img.src = 'scanbillede.png'; // ← brug dit eget billede her
+  img.alt = 'Scan billede';
+  img.className = 'scan-billede';
+  pageContent.appendChild(img);
 
-    pageContent.appendChild(img);
-
-    // Skjul topbar
-    document.querySelector('.top-bar').style.display = 'none';
-}
-
+  tekstOverlay.style.display = 'none';
+},
 
 
   // Kontrol viser nu en dynamisk GIF
