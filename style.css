@@ -180,7 +180,7 @@ p {
   top: 0; /* starter øverst */
   left: 0;
   width: 100vw;
-  height: calc(100vh - var(--bottombar-height)); /* fylder hele pladsen til bundbar */
-  object-fit: cover;  /* fylder hele området, beskærer hvis nødvendigt */
+  height: calc(100vh - var(--bottombar-height)); /* fylder op til bundbaren */
+  object-fit: cover;
   display: block;
 }
