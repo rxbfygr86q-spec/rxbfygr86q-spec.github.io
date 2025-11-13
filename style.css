@@ -177,10 +177,12 @@ p {
 
 .scan-billede {
   position: absolute;
-  top: 0; /* Starter helt oppe, fordi topbaren er skjult */
+  top: 0;
   left: 0;
   width: 100vw;
-  height: calc(100vh - var(--bottombar-height)); /* Fylder resten af skærmen */
-  object-fit: cover;
+  height: calc(100svh - var(--bottombar-height)); /* Brug svh i stedet for vh */
+  object-fit: contain; /* Sørger for at hele billedet kan ses */
   display: block;
+  background-color: black; /* Valgfrit – så det ser pænt ud hvis billedet ikke fylder hele skærmen */
 }
+
