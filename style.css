@@ -177,10 +177,10 @@ p {
 
 .scan-billede {
   position: absolute;
-  top: 0;
-  left: 10vw;
+  top: 0; /* starter øverst */
+  left: 0;
   width: 100vw;
-  height: calc(100svh - var(--bottombar-height)); /* Fylder fra toppen til bundbar */
-  object-fit: cover;  /* Fylder hele området, beskærer evt. lidt hvis proportioner ikke passer */
+  height: calc(100vh - var(--bottombar-height)); /* fylder hele pladsen til bundbar */
+  object-fit: cover;  /* fylder hele området, beskærer hvis nødvendigt */
   display: block;
 }
