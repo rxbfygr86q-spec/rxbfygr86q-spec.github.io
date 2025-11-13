@@ -178,7 +178,7 @@ p {
 .scan-billede {
   position: absolute;
   top: 0;
-  left: 10;
+  left: 10vw;
   width: 100vw;
   height: calc(100svh - var(--bottombar-height)); /* Fylder fra toppen til bundbar */
   object-fit: cover;  /* Fylder hele området, beskærer evt. lidt hvis proportioner ikke passer */
