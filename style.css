@@ -174,3 +174,13 @@ p {
   height: auto;     /* bevarer proportioner */
   margin-top: - 100px; /* rykker billedet ned */
 }
+
+.scan-billede {
+  position: absolute;
+  top: 0; /* Starter helt oppe, fordi topbaren er skjult */
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - var(--bottombar-height)); /* Fylder resten af skærmen */
+  object-fit: cover;
+  display: block;
+}
