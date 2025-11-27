@@ -94,7 +94,7 @@ const pages = {
     pageContent.innerHTML = `
       <p>Vælg hvilket kort der skal vises:</p>
       <button class="billede-valg" data-billede="id1.png" data-gif="kontrol1.gif">Id Frue</button>
-      <button class="billede-valg" data-billede="id2.png" data-gif="kontrol2.gif">Id Fake (Frue)</button>
+      <button class="billede-valg" data-billede="id2.png" data-gif="kontrol2.gif">Id Philip</button>
       <button class="billede-valg" data-billede="id3.png" data-gif="kontrol3.gif">Id Maack</button>
       <button class="billede-valg" data-billede="id4.png" data-gif="kontrol4.gif">Id Fake (Maack)</button>
     `;
